@@ -1,141 +1,161 @@
-# Portfolio Website with CMS
+📌 Portfolio Website with CMS
 
-A full-stack portfolio website with an integrated Content Management System (CMS). Built with React, Node.js, Express, and PostgreSQL.
+A complete full-stack portfolio website combined with an integrated CMS.
+Built using React, Node.js, Express, and PostgreSQL.
 
-## Features
+✨ Features
+🔹 Portfolio Website
 
-- **Portfolio Website**
-  - Responsive design that works on all devices
-  - Project showcase with images, descriptions, and links
-  - Blog section with featured posts
-  - Contact form with email notifications
-  - Modern, attractive UI
+Fully responsive layout
 
-- **CMS Dashboard** (Integrated in same web app)
-  - Secure admin authentication (username/password not exposed)
-  - Manage projects (CRUD operations)
-  - Manage blog posts (CRUD operations)
-  - View and manage contact messages
-  - Site settings and theme customization
-  - Dashboard with statistics
+Project showcase with images, descriptions, and links
 
-- **Backend Features**
-  - RESTful API with Express.js
-  - PostgreSQL database (works with pgAdmin)
-  - JWT-based authentication
-  - Email notifications via Nodemailer
-  - Input validation and error handling
+Blog section with featured posts
 
-## Prerequisites
+Contact form with email notifications
 
-- Node.js (v14 or higher)
-- PostgreSQL (v12 or higher)
-- pgAdmin (for database management)
-- npm or yarn
+Clean and modern UI
 
-## Installation
+🔹 CMS Dashboard (built inside the same application)
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd ZarinPortfolio-cms
-   ```
+Secure admin authentication
 
-2. **Install dependencies**
-   ```bash
-   npm run install-all
-   ```
-   This will install dependencies for both server and client.
+Manage:
 
-3. **Set up PostgreSQL database**
-   - Open pgAdmin
-   - Create a new database named `portfolio_cms`
-   - Note your database credentials (host, port, username, password)
+Projects (CRUD)
 
-4. **Configure environment variables**
-   - Create a `.env` file in the root directory
-   - Copy the following template and fill in your values:
-   ```env
-   # Server Configuration
-   PORT=5000
-   NODE_ENV=development
+Blog posts (CRUD)
 
-   # Database Configuration (PostgreSQL)
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_NAME=portfolio_cms
-   DB_USER=postgres
-   DB_PASSWORD=your_password_here
+Skills (CRUD) 
 
-   # JWT Secret
-   JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
+Contact messages
 
-   # Email Configuration (for contact form)
-   EMAIL_HOST=smtp.gmail.com
-   EMAIL_PORT=587
-   EMAIL_USER=your_email@gmail.com
-   EMAIL_PASS=your_app_password_here
-   EMAIL_TO=your_receiving_email@gmail.com
+Site settings
 
-   # Frontend URL
-   CLIENT_URL=http://localhost:3000
-   ```
+Dashboard with important statistics
 
-5. **Start the application**
-   ```bash
-   npm run dev
-   ```
-   This will start both the backend server (port 5000) and frontend (port 3000).
+🔹 Backend Features
 
-   Or start them separately:
-   ```bash
-   # Terminal 1 - Backend
-   npm run server
+REST API built with Express
 
-   # Terminal 2 - Frontend
-   npm run client
-   ```
+PostgreSQL database
 
-## Default Admin Credentials
+JWT-based authentication
 
-After the first run, a default admin user is created:
-- **Username:** `admin`
-- **Password:** `adminzarin@zarin5678`
+Email sending via Nodemailer
 
-⚠️ **IMPORTANT:** Change the default password immediately after first login through the admin dashboard!
+Proper validation & error handling
 
-## Usage
+📦 Prerequisites
 
-### Accessing the Application
+Node.js (v14+)
 
-- **Frontend:** http://localhost:3000
-- **Backend API:** http://localhost:5000/api
-- **Admin Login:** http://localhost:3000/admin/login
+PostgreSQL
 
-### Admin Dashboard
+pgAdmin (optional for DB management)
 
-1. Navigate to `/admin/login`
-2. Login with your admin credentials
-3. Access the CMS dashboard to:
-   - Add/Edit/Delete projects
-   - Create and manage blog posts
-   - View contact form submissions
-   - Customize site settings and theme
+npm or yarn
 
-### Database Management
+⚙️ Installation Guide
+1. Clone the Repository
+git clone <repository-url>
+cd ZarinPortfolio-cms
 
-The application automatically creates all necessary tables on first run. You can manage the database using pgAdmin:
+2. Install Dependencies
+npm run install-all
 
-- **Tables created:**
-  - `users` - Admin user accounts
-  - `projects` - Portfolio projects
-  - `blog_posts` - Blog articles
-  - `contact_messages` - Contact form submissions
-  - `settings` - Site configuration
+3. Set up PostgreSQL
 
-## Project Structure
+Open pgAdmin
 
-```
+Create a new database named: portfolio_cms
+
+Keep your DB credentials ready
+
+4. Create .env File
+
+Copy this and fill in your information:
+
+PORT=5000
+NODE_ENV=development
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=portfolio_cms
+DB_USER=postgres
+DB_PASSWORD=your_database_password
+
+JWT_SECRET=your_random_secret
+
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_app_password
+EMAIL_TO=your_receiving_email@gmail.com
+
+CLIENT_URL=http://localhost:3000
+
+
+⚠️ Make sure your secrets & passwords are not shared publicly.
+
+5. Run the Project
+npm run dev
+
+
+Or run them separately:
+
+# Backend
+npm run server
+
+# Frontend
+npm run client
+
+👤 Default Admin
+
+A default admin account is automatically created on first run.
+→ Change your password immediately from the settings page.
+
+🚀 How to Use
+🔗 Access URLs
+
+Frontend: http://localhost:3000
+
+API: http://localhost:5000/api
+
+Admin Login: http://localhost:3000/admin/login
+
+Admin Dashboard Includes
+
+Manage Projects
+
+Manage Blog Posts
+
+Manage Skills 
+
+View/Respond to Contact Messages
+
+Update Site Settings
+
+View Statistics
+
+🗄️ Database Structure
+
+Tables created automatically:
+
+users
+
+projects
+
+blog_posts
+
+skills 
+
+contact_messages
+
+settings
+
+📁 Project Structure
+
 ZarinPortfolio-cms/
 ├── client/                 # React frontend
 │   ├── public/
@@ -155,3 +175,114 @@ ZarinPortfolio-cms/
 ├── package.json
 └── README.md
 
+
+📚 API Endpoints
+Auth
+
+POST /api/auth/login
+
+GET /api/auth/verify
+
+POST /api/auth/change-password
+
+Projects
+
+GET /api/projects
+
+POST /api/projects
+
+PUT /api/projects/:id
+
+DELETE /api/projects/:id
+
+Blog
+
+GET /api/blog
+
+POST /api/blog
+
+PUT /api/blog/:id
+
+DELETE /api/blog/:id
+
+Skills 
+
+GET /api/skills
+
+POST /api/skills
+
+PUT /api/skills/:id
+
+DELETE /api/skills/:id
+
+Contact
+
+POST /api/contact
+
+GET /api/contact
+
+DELETE /api/contact/:id
+
+Settings
+
+GET /api/settings
+
+PUT /api/settings
+
+🔒 Security
+
+Password hashing (bcrypt)
+
+JWT Authentication
+
+Protected admin routes
+
+Input validation
+
+SQL-safe queries
+
+📬 Email Setup
+
+For Gmail:
+
+Enable 2FA
+
+Generate an App Password
+
+Use it inside .env
+
+🛠️ Development Notes
+
+concurrently for running frontend + backend
+
+nodemon for auto-restart
+
+CRA for frontend hot reload
+
+🚢 Production Build
+npm run build
+
+
+Set NODE_ENV=production and the server will serve the built React app.
+
+❗ Troubleshooting
+
+DB not connecting?
+
+Check PostgreSQL is running
+
+Check .env credentials
+
+Port in use?
+
+Change PORT in .env
+
+Admin login failing?
+
+Ensure default admin user is created
+
+Check JWT_SECRET
+
+📄 License
+
+ISC
