@@ -100,12 +100,12 @@ const init = async () => {
     const adminCheck = await pool.query('SELECT * FROM users WHERE username = $1', ['admin']);
     if (adminCheck.rows.length === 0) {
       const bcrypt = require('bcryptjs');
-      const hashedPassword = await bcrypt.hash('adminzarin@zarin5678', 10);
+      const hashedPassword = await bcrypt.hash('process.env.ADMIN_PASSWORD', 10);
       await pool.query(
         'INSERT INTO users (username, password, email) VALUES ($1, $2, $3)',
-        ['admin', hashedPassword, 'admin@portfolio.com']
+        ['admin', hashedPassword, 'process.env.ADMIN_EMAIL']
       );
-      console.log('Default admin user created (username: admin, password: adminzarin@zarin5678)');
+      console.log('Default admin user created (username: admin, password: ${process.env.ADMIN_PASSWORD})');
       console.log('⚠️  IMPORTANT: Change the default password after first login!');
     }
 
