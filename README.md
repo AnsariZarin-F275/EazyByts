@@ -117,6 +117,7 @@ A default admin account is automatically created on first run.
 → Change your password immediately from the settings page.
 
 🚀 How to Use
+
 🔗 Access URLs
 
 Frontend: http://localhost:3000
