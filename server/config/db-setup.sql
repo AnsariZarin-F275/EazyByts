@@ -1,6 +1,4 @@
 -- PostgreSQL Database Setup Script
--- This script is optional - the application will create tables automatically
--- Run this manually if you want to verify the schema
 
 -- Create database (run this in pgAdmin or psql)
 -- CREATE DATABASE portfolio_cms;
