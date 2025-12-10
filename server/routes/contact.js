@@ -5,14 +5,13 @@ const { authenticateToken } = require('../middleware/auth');
 const nodemailer = require('nodemailer');
 const router = express.Router();
 
-// Create email transporter
+// Create email transporter (fixed: use nodemailer.createTransport)
 const createTransporter = () => {
   const port = Number(process.env.EMAIL_PORT) || 587;
-
   return nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port,
-    secure: port === 465, // use SSL for standard SMTPS port
+    secure: port === 465, // standard SMTPS
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
