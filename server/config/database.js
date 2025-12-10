@@ -96,7 +96,7 @@ const init = async () => {
       )
     `);
 
-    // Create default admin user if not exists (password: adminzarin@zarin5678 - change this!)
+    // Create default admin user if not exists
     const adminCheck = await pool.query('SELECT * FROM users WHERE username = $1', ['admin']);
     if (adminCheck.rows.length === 0) {
       const bcrypt = require('bcryptjs');
