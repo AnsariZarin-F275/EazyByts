@@ -157,28 +157,9 @@ contact_messages
 settings
 
 📁 Project Structure
+
+
 <img width="524" height="428" alt="image" src="https://github.com/user-attachments/assets/17e27c06-b3e0-4493-ba18-3589e964dde6" />
-
-
-ZarinPortfolio-cms/
-├── client/                 # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── pages/         # Page components
-│   │   │   └── admin/     # Admin dashboard pages
-│   │   ├── context/       # React context (Auth)
-│   │   ├── utils/         # Utility functions
-│   │   └── App.js
-│   └── package.json
-├── server/                 # Node.js backend
-│   ├── config/            # Database configuration
-│   ├── middleware/        # Auth middleware
-│   ├── routes/            # API routes
-│   └── index.js           # Server entry point
-├── package.json
-└── README.md
-
 
 📚 API Endpoints
 Auth
