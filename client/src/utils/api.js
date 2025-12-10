@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// Prefer env override; fall back to deployed Render backend.
+const apiBaseUrl = process.env.REACT_APP_API_BASE || 'https://portfolio-backend-abs2.onrender.com/api';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: apiBaseUrl,
   headers: {
     'Content-Type': 'application/json'
   }
