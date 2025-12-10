@@ -1,0 +1,73 @@
+.admin-blog h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.post-info {
+  flex: 1;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.post-header h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+.draft-badge {
+  background: var(--warning);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.post-info p {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.post-date {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .post-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+

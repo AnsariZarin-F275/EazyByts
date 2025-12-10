@@ -1,0 +1,47 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] {
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --border-color: #374151;
+}
+
+[data-theme="dark"] .card {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .form-group select {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1200;
+}
+
+.theme-toggle button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+
+

@@ -1,0 +1,79 @@
+.admin-messages h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message-item {
+  padding: 20px;
+}
+
+.message-item.unread {
+  border-left: 4px solid var(--primary-color);
+  background: var(--bg-secondary);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.message-header h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.message-email {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.message-subject {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.message-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  white-space: pre-wrap;
+}
+
+.message-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-date {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.no-messages {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 60px 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .message-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+

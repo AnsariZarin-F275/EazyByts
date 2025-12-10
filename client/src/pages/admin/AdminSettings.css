@@ -1,0 +1,20 @@
+.admin-settings h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.settings-form {
+  max-width: 600px;
+}
+
+.settings-form .form-group input[type="color"] {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
