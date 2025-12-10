@@ -157,6 +157,7 @@ contact_messages
 settings
 
 📁 Project Structure
+<img width="524" height="428" alt="image" src="https://github.com/user-attachments/assets/17e27c06-b3e0-4493-ba18-3589e964dde6" />
 
 
 ZarinPortfolio-cms/
